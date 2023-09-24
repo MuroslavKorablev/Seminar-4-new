@@ -5,17 +5,23 @@
     return number;
 }
 
-int countDigit(int number)
+int countDigits(int number)
 {
-    int count = 0;
-    while (number != 0)
-{
-    count++;
-    number = number / 10;
-}
-    return count;
-}
+    if (number == 0)
+    {
+        return 1; // Если число равно 0, возвращаем 1.
+    }
 
+    {
+        int count = 0;
+        while (number != 0)
+        {
+            count++;
+            number = number / 10;
+        }
+        return count;
+    }
+}
 int number = WorkWithUser("Введите число: ");
-int count = countDigit(number);
+int count = countDigits(number);
 System.Console.WriteLine($"В числе {number} количество цифр равно: {count}");
