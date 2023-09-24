@@ -1,6 +1,4 @@
-﻿using System.Formats.Asn1;
-
-int WorkWithUser(string message)
+﻿int WorkWithUser(string message)
 {
     System.Console.Write(message);
     int number = int.Parse(System.Console.ReadLine()!);
