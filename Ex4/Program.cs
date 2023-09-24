@@ -9,16 +9,17 @@
 
 // Заполнение и вывод массива из 8 элементов случайными числами 0 и 1
 int[] numbers = new int[8];
-FillArray(numbers);
+Random random = new Random(); // Создание объекта Random
+FillArray(numbers, random);
 PrintArray(numbers);
 
-void FillArray(int[] array)
+void FillArray(int[] array, Random random)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(0, 2);
+        array[i] = random.Next(2); // Использование одного и того же объекта Random 
     }
-} 
+}
 
 void PrintArray(int[] collection)
 {
